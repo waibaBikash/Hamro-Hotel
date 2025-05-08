@@ -52,35 +52,43 @@ const Navbar = () => {
 
               {/* Logo */}
               <Link to='/'>
-                  <img src={assets.logo} alt="logo" className={`h-9 ${isScrolled && "invert opacity-80"}`} />
+                  <img src={assets.logo} alt="logo"
+                   className={`h-9 ${isScrolled && "invert opacity-80"}`} />
               </Link>
 
               {/* Desktop Nav */}
               <div className="hidden md:flex items-center gap-4 lg:gap-8">
                   {navLinks.map((link, i) => (
-                      <a key={i} href={link.path} className={`group flex flex-col gap-0.5 ${isScrolled ? "text-gray-700" : "text-white"}`}>
+                      <a key={i} href={link.path}
+                       className={`group flex flex-col gap-0.5 ${isScrolled ? "text-gray-700" : "text-white"}`}>
                           {link.name}
-                          <div className={`${isScrolled ? "bg-gray-700" : "bg-white"} h-0.5 w-0 group-hover:w-full transition-all duration-300`} />
+                          <div 
+                          className={`${isScrolled ? "bg-gray-700" : "bg-white"} h-0.5 w-0 group-hover:w-full transition-all duration-300`} />
                       </a>
                   ))}
-                  <button onClick={()=>navigage('/owner')}  className={`border px-4 py-1 text-sm font-light rounded-full cursor-pointer ${isScrolled ? 'text-black' : 'text-white'} transition-all`} >
+                  <button onClick={()=>navigage('/owner')} 
+                   className={`border px-4 py-1 text-sm font-light rounded-full cursor-pointer ${isScrolled ? 'text-black' : 'text-white'} transition-all`} >
                       Dashboard
                   </button>
               </div>
 
               {/* Desktop Right */}
               <div className="hidden md:flex items-center gap-4">
-                  <img src={assets.searchIcon} alt="search" className= {`${isScrolled && 'invert'} h-7 transition-all duration-500`} />
+                  <img src={assets.searchIcon} alt="search" 
+                  className= {`${isScrolled && 'invert'} h-7 transition-all duration-500`} />
 
                   {user ? (<UserButton>
                     <UserButton.MenuItems>
-                        <UserButton.Action label="My Bookings" labelIcon={<BookIcon/>}
+                        <UserButton.Action 
+                        label="My Bookings"
+                         labelIcon={<BookIcon/>}
                          onClick={()=>navigage('/')}>
 
                         </UserButton.Action>
                     </UserButton.MenuItems>
                   </UserButton>)
-                  :(<button onClick={openSignIn} className="bg-black text-white px-8 py-2.5 rounded-full ml-4 transition-all duration-500">
+                  :(<button onClick={openSignIn}
+                   className="bg-black text-white px-8 py-2.5 rounded-full ml-4 transition-all duration-500">
                     Login
                 </button>)
                   }
@@ -102,13 +110,19 @@ const Navbar = () => {
                     </UserButton.MenuItems>
                 </UserButton>
               }
-                  <img onClick={()=>setIsMenuOpen(!isMenuOpen)} src={assets.menuIcon} alt="menu-icon"  className={`${isScrolled && 'invert'} h-4`}/>
+                  <img 
+                  onClick={()=>setIsMenuOpen(!isMenuOpen)}
+                   src={assets.menuIcon} alt="menu-icon" 
+                    className={`${isScrolled && 'invert'} h-4`}/>
               </div>
 
               {/* Mobile Menu */}
-              <div className={`fixed top-0 left-0 w-full h-screen bg-white text-base flex flex-col md:hidden items-center justify-center gap-6 font-medium text-gray-800 transition-all duration-500 ${isMenuOpen ? "translate-x-0" : "-translate-x-full"}`}>
-                  <button className="absolute top-4 right-4" onClick={() => setIsMenuOpen(false)}>
-                      <img src={assets.closeIcon} alt="close-menu" className='h-6.5' />
+              <div 
+              className={`fixed top-0 left-0 w-full h-screen bg-white text-base flex flex-col md:hidden items-center justify-center gap-6 font-medium text-gray-800 transition-all duration-500 ${isMenuOpen ? "translate-x-0" : "-translate-x-full"}`}>
+                  <button className="absolute top-4 right-4"
+                   onClick={() => setIsMenuOpen(false)}>
+                      <img src={assets.closeIcon} alt="close-menu"
+                       className='h-6.5' />
                   </button>
 
                   {navLinks.map((link, i) => (
@@ -117,12 +131,15 @@ const Navbar = () => {
                       </a>
                   ))}
                { user &&
-                  <button className="border px-4 py-1 text-sm font-light rounded-full cursor-pointer transition-all" onClick={()=> navigage('/owner')}>
+                  <button 
+                  className="border px-4 py-1 text-sm font-light rounded-full cursor-pointer transition-all" 
+                  onClick={()=> navigage('/owner')}>
                       Dashboard
                   </button>
                   }
                    { ! user &&
-                      <button onClick={openSignIn} className="bg-black text-white px-8 py-2.5 rounded-full transition-all duration-500">
+                      <button onClick={openSignIn}
+                      className="bg-black text-white px-8 py-2.5 rounded-full transition-all duration-500">
                       Login
                   </button>
                    }

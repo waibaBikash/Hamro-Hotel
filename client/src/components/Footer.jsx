@@ -9,7 +9,9 @@ const Footer = () => {
         <div className='max-w-80'>
             <img src={assets.logo} alt="logo" className='mb-4 h-8 md:h-9 invert opacity-80' />
             <p className='text-sm'>
-                Discover the world's most exrraordinary places with us. We offer a curated selection of unique stays, from luxurious villas to cozy cabins, ensuring an unforgettable experience for every traveler.
+                Discover the world's most exrraordinary places with us. We offer
+                a curated selection of unique stays, from luxurious villas to cozy
+                cabins, ensuring an unforgettable experience for every traveler.
             </p>
             <div className='flex items-center gap-3 mt-4'>
                  <img src={assets.instagramIcon} alt="instagram-icon" className='w-6' />
@@ -50,9 +52,13 @@ const Footer = () => {
                 Subscribe to our newsletter for inspiration and special offers.
             </p>
             <div className='flex items-center mt-4'>
-                <input type="text" className='bg-white rounded-l border border-gray-300 h-9 px-3 outline-none' placeholder='Your email' />
-                <button className='flex items-center justify-center bg-black h-9 w-9 aspect-square rounded-r'>
-                    <img src={assets.arrowIcon} alt="" className='w-3.5 invert' />
+                <input type="text"
+                 className='bg-white rounded-l border border-gray-300 h-9 px-3 outline-none'
+                 placeholder='Your email' />
+                <button 
+                 className='flex items-center justify-center bg-black h-9 w-9 aspect-square rounded-r'>
+                    <img src={assets.arrowIcon} alt="arro-icon" 
+                    className='w-3.5 invert' />
                 </button>
             </div>
         </div>

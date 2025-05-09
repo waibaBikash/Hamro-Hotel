@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { assets, roomsDummyData } from '../assets/assets';
+import { assets, facilityIcons, roomsDummyData } from '../assets/assets';
 import StarRating from '../components/StarRating';
 
 const RoomDetails = () => {
@@ -43,7 +43,20 @@ const RoomDetails = () => {
                    ))}
                  </div>
            </div>
-
+             {/* Room Highlight */}
+              <div className='flex flex-col md:flex-row md:justify-between mt-10'>
+                  <div>
+                     <h1 className='text-3xl md:text-4xl font-playfair'>Experience Luxury Like Never Before</h1>
+                       <div className='flex flex-wrap items-center mt-3 mb-6 gap-4'>
+                         {room.amenities.map((item, index)=>(
+                          <div key={index} className='flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100'>
+                            <img src={facilityIcons[item]} alt={item} className='w-5 h-5' />
+                            <p className='text-xs'>{item}</p>
+                          </div>
+                         ))}
+                       </div>
+                  </div>
+              </div>
     </div>
   )
 }

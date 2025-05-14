@@ -4,10 +4,12 @@ import { assets, dashboardDummyData } from '../../assets/assets'
 
 const Dashboard = () => {
 
-  const [dashboardData, setdashboardData] = useState(dashboardDummyData)
+  const [dashboardData,
+     setdashboardData] = useState(dashboardDummyData)
   return (
     <div>
-      <Title align='left' font='outfit' title='Dashboard' subTitle='Monitor your room listings, track bookings and analyze revenue-all in one place. Stay updated with real-time insights to ensure smooth operaiton.' />
+      <Title align='left' font='outfit' title='Dashboard'
+       subTitle='Monitor your room listings, track bookings and analyze revenue-all in one place. Stay updated with real-time insights to ensure smooth operaiton.' />
         <div className='flex gap-4 my-8'>
           {/* Total Bookings */}
            <div className='bg-primary/3 border border-primary/10 rounded flex p-4 pr-8'>
@@ -55,7 +57,8 @@ const Dashboard = () => {
                          $ {item.totalPrice}
                        </td>
                         <td className='py-3 px-4 border-t border-gray-300 flex'>
-                             <button className={`py-1 px-3 text-xs rounded-full mx-auto ${item.isPaid ? 'bg-green-200 text-green-600' : 'bg-amber-100 text-yellow-600'}`}>
+                             <button 
+                             className={`py-1 px-3 text-xs rounded-full mx-auto ${item.isPaid ? 'bg-green-200 text-green-600' : 'bg-amber-100 text-yellow-600'}`}>
                               {item.isPaid ? 'Completed' : 'Pending' }
                              </button>
                         </td>

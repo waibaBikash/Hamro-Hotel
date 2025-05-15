@@ -45,7 +45,7 @@ const Dashboard = () => {
                </thead>
 
                 <tbody className='text-sm'>
-                  {dashboardData.bookings.map((tiem, index)=>(
+                  {dashboardData.bookings.map((item, index)=>(
                     <tr key={index} className='border-b border-gray-200'>
                        <td className='py-3 px-4 text-gray-700 border-t border-gray-300'>
                          {item.user.userName}

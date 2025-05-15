@@ -7,7 +7,8 @@ const ListRoom = () => {
   const [rooms, setRooms] = useState(roomsDummyData)
   return (
     <div>
-      <Title align='left' font='outfit' title='Room Listings'
+      <Title align='left'
+       font='outfit' title='Room Listings'
        subTitle='Manage your room listings, update details, and ensure accurate information for potential guests. Keep your listings up-to-date to attract more bookings.' />
        <p className='text-gray-500 mt-8'>All Rooms</p>
         <div className='w-full max-w-3xl text-left border border-gray-300 rounded-lg max-h-80 overflow-y-scroll mt-3'>
@@ -34,11 +35,13 @@ const ListRoom = () => {
                        </td>
                         <td className='py-3 px-4 border-t border-gray-300 text-sm text-red-500 text-center'>
                            <label className='relative inline-flex items-center cursor-pointer text-gray-900 gap-3'>
-                             <input type="checkbox" className='sr-only peer' checked={item.isAvailable} />
-                              <div className='w-12 h-7 bg-slate-300 rounded-full peer peer-checked:bg-blue-600 transition-colors duration-200'>
+                             <input type="checkbox" 
+                             className='sr-only peer' 
+                             checked={item.isAvailable} />
+                              <div 
+                               className='w-12 h-7 bg-slate-300 rounded-full peer peer-checked:bg-blue-600 transition-colors duration-200'></div>
                                 <span className='dot absolute left-1 top-1 w-5 bg-white rounded-full transition-transform duration-200 ease-in-out peer-checked:translate-x-5'></span>
 
-                              </div>
                            </label>
                              
                         </td>

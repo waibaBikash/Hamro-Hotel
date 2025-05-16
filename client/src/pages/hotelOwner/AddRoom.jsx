@@ -78,7 +78,7 @@ const AddRoom = () => {
             {Object.keys(input.amenities).map((amenity, index) => (
               <div key={index} className='flex items-center gap-2'>
                 <input type="checkbox" id={`amenities${index+1}`} checked={input.amenities[amenity]} onChange={e => setInput({...input, amenities: {...input.amenities, [amenity]: !input.amenities[amenity]}})} />
-                <label htmlFor={`amenities${index+1}`} className='text-gray-800'>{amenity}</label>
+                <label htmlFor={`amenities${index+1}`}>{amenity}</label>
               </div>
             ))}
            

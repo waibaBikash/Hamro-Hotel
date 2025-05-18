@@ -31,7 +31,10 @@ const AddRoom = () => {
   })
   return (
     <form >
-      <Title align='left' font='outfit' title='Add Room' subTitle='Fill in the details carefully and accurate room details, pricing, and amenities, to enchance the user booking experiecne.' />
+      <Title align='left' font='outfit' 
+      title='Add Room'
+       subTitle='Fill in the details carefully and accurate room details, pricing,
+        and amenities, to enchance the user booking experiecne.' />
       {/* Upload Area For Images */}
       <p className='text-gray-800 mt-10'>Images</p>
       <div className='gird grid-cols-2 sm:flex gap-4 my-2 flex-wrap'>
@@ -69,15 +72,19 @@ const AddRoom = () => {
                <p className='mt-4 text-gray-800'>
                   Price <span className='text-xs'>/night</span>
                </p>
-               <input value={input.pricePerNight} onChange={e => setInput({...input, pricePerNight: e.target.value})}
-                type="number" placeholder='0' className='border border-gray-300 mt-1 rounded p-2 w-24' />
+               <input value={input.pricePerNight} 
+               onChange={e => setInput({...input, pricePerNight: e.target.value})}
+                type="number" placeholder='0' 
+                className='border border-gray-300 mt-1 rounded p-2 w-24' />
              </div>
        </div>
         <p className='text-gray-800 mt-4'>Amenities</p>
          <div className='flex flex-col flex-wrap mt-1 text-gray-400 max-w-sm'>
             {Object.keys(input.amenities).map((amenity, index) => (
               <div key={index} className='flex items-center gap-2'>
-                <input type="checkbox" id={`amenities${index+1}`} checked={input.amenities[amenity]} onChange={e => setInput({...input, amenities: {...input.amenities, [amenity]: !input.amenities[amenity]}})} />
+                <input type="checkbox" id={`amenities${index+1}`}
+                 checked={input.amenities[amenity]} 
+                 onChange={e => setInput({...input, amenities: {...input.amenities, [amenity]: !input.amenities[amenity]}})} />
                 <label htmlFor={`amenities${index+1}`}>{amenity}</label>
               </div>
             ))}

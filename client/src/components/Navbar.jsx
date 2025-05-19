@@ -23,7 +23,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { openSignIn } = useClerk();
   const {user} = useUser();
-  const navigage = useNavigate();
+  const navigate = useNavigate();
   const location = useLocation();
 
 
@@ -66,7 +66,7 @@ const Navbar = () => {
                           className={`${isScrolled ? "bg-gray-700" : "bg-white"} h-0.5 w-0 group-hover:w-full transition-all duration-300`} />
                       </a>
                   ))}
-                  <button onClick={()=>navigage('/owner')} 
+                  <button onClick={()=>navigate('/owner')} 
                    className={`border px-4 py-1 text-sm font-light rounded-full cursor-pointer ${isScrolled ? 'text-black' : 'text-white'} transition-all`} >
                       Dashboard
                   </button>
@@ -82,7 +82,7 @@ const Navbar = () => {
                         <UserButton.Action 
                         label="My Bookings"
                          labelIcon={<BookIcon/>}
-                         onClick={()=>navigage('/')}>
+                         onClick={()=>navigate('/')}>
 
                         </UserButton.Action>
                     </UserButton.MenuItems>
@@ -104,7 +104,7 @@ const Navbar = () => {
                 user && <UserButton>
                     <UserButton.MenuItems>
                         <UserButton.Action label="My Bookings" labelIcon={<BookIcon/>}
-                         onClick={()=>navigage('/my-bookings')}>
+                         onClick={()=>navigate('/my-bookings')}>
     
                         </UserButton.Action>
                     </UserButton.MenuItems>
@@ -133,7 +133,7 @@ const Navbar = () => {
                { user &&
                   <button 
                   className="border px-4 py-1 text-sm font-light rounded-full cursor-pointer transition-all" 
-                  onClick={()=> navigage('/owner')}>
+                  onClick={()=> navigate('/owner')}>
                       Dashboard
                   </button>
                   }

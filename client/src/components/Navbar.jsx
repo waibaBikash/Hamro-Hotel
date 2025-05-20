@@ -28,7 +28,7 @@ const Navbar = () => {
 
 
    useEffect(() => {
-    if (location.pathname === '/') {
+    if (location.pathname !== '/') {
         setIsScrolled(true);
         return;
     }else{
@@ -82,7 +82,7 @@ const Navbar = () => {
                         <UserButton.Action 
                         label="My Bookings"
                          labelIcon={<BookIcon/>}
-                         onClick={()=>navigate('/')}>
+                         onClick={()=>navigate('/my-bookings')}>
 
                         </UserButton.Action>
                     </UserButton.MenuItems>
@@ -96,8 +96,6 @@ const Navbar = () => {
               </div>
 
               {/* Mobile Menu Button */}
-
-              
               <div className="flex items-center gap-3 md:hidden">
 
               {
@@ -137,7 +135,7 @@ const Navbar = () => {
                       Dashboard
                   </button>
                   }
-                   { ! user &&
+                   { !user &&
                       <button onClick={openSignIn}
                       className="bg-black text-white px-8 py-2.5 rounded-full transition-all duration-500">
                       Login

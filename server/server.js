@@ -6,10 +6,12 @@ import { clerkMiddleware } from '@clerk/express'
 import clerkWebhooks from './controllers/clerkWebhooks.js';
 import userRouter from './routes/userRoutes.js';
 import hotelRouter from './routes/hotelRoutes.js';
+import connectCloudinary from './configs/cloudinary.js';
 
 
 
 connectDB(); // Connect to MongoDB
+connectCloudinary(); // Connect to Cloudinary
 
 const app = express();
 app.use(cors()); // Enable CORS for all routes

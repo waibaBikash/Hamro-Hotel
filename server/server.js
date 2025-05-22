@@ -5,6 +5,7 @@ import connectDB from './configs/db.js';
 import { clerkMiddleware } from '@clerk/express'
 import clerkWebhooks from './controllers/clerkWebhooks.js';
 import userRouter from './routes/userRoutes.js';
+import hotelRouter from './routes/hotelRoutes.js';
 
 
 
@@ -24,6 +25,7 @@ app.use("/api/clerk", clerkWebhooks);
 app.get('/', (req, res) => 
     res.send('API is running'));
 app.use('/api/user', userRouter); // User routes
+app.use('/api/hotels', hotelRouter )
 
 const PORT = process.env.PORT || 3000;
 

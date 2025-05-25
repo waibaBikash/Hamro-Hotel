@@ -80,7 +80,7 @@ export const createBooking = async (req, res) => {
 // GET /api/bookings/user
 
 
-const getUserBookings = async (req, res) => {
+export const getUserBookings = async (req, res) => {
   try {
     const user = req.user._id;
     const bookings = await Booking.find({ user })
@@ -116,3 +116,5 @@ export const getHotelBookings = async (req, res) => {
     res.json({ success: false, message: "Failed to fetch hotel bookings" });
   }
 }
+
+

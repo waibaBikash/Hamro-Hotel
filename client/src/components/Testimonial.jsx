@@ -1,6 +1,6 @@
-import Title from './Title'
-import { testimonials } from '../assets/assets'
-import StarRating from './StarRating'
+import Title from './Title';
+import { testimonials } from '../assets/assets';
+import StarRating from './StarRating';
 
 const Testimonial = () => {
   return (
@@ -32,4 +32,4 @@ const Testimonial = () => {
   )
 }
 
-export default Testimonial
+export default Testimonial;

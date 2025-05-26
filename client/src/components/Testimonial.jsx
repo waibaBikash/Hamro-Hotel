@@ -1,4 +1,3 @@
-import React from 'react'
 import Title from './Title'
 import { testimonials } from '../assets/assets'
 import StarRating from './StarRating'
@@ -6,7 +5,9 @@ import StarRating from './StarRating'
 const Testimonial = () => {
   return (
     <div className='flex flex-col items-center px-6 md:px-16 lg:px-24 bg-slate-50 pt-20 pb-30'>
-      <Title title='What Our Guest Say' subTitle='Discover why discerning travelers consistently choose HamroStay for their exclusive and luxurious accomodations around the world.' />
+      <Title title='What Our Guest Say' 
+      subTitle='Discover why discerning travelers consistently choose HamroStay for their exclusive and luxurious accomodations around the world.'
+       />
        
       <div className="flex flex-wrap items-center gap-6 mt-20">
                 {testimonials.map((testimonial) => (

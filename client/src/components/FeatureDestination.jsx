@@ -10,7 +10,7 @@ const FeatureDestination = () => {
     <div className='flex flex-col items-center px-6 md:px-16 lg:px-24 bg-slate-50 py-20'>
 
       <Title title='Featured Destination' 
-      subTitle='Discover our handpicked selection of exceptional prpperties around the world, offering uderalleled luxury and unforgettable experience.' />
+      subTitle='Discover our handpicked selection of exceptional properties around the world, offering uderalleled luxury and unforgettable experience.' />
        
        <div className='flex flex-wrap items-center justify-center gap-6 mt-20 '>
 

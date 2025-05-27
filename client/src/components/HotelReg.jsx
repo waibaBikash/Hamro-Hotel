@@ -14,17 +14,17 @@ const HotelReg = () => {
   const [address, setAddress] = useState('');
   const [city, setCity] = useState('');
 
-  const onsubmitHandler = async (event) => {
+  const onSubmitHandler = async (event) => {
    try {
      event.preventDefault();
-     const {data} = await axios.post('/api/hotels/', {
+     const {data} = await axios.post(`/api/hotels/`, {
         name,
         contact,
         address,
         city
       }, {
         headers: {
-          Authorization: `Bearer ${getToken()}`
+          Authorization: `Bearer ${ await getToken()}`
         }
      })
       if (data.success) {
@@ -43,7 +43,7 @@ const HotelReg = () => {
     <div onClick={()=> setShowHotelReg(false)} 
      className='fixed top-0 bottom-0 left-0 right-0 z-100 flex items-center justify-center bg-black/70'>
 
-      <form onSubmit={onsubmitHandler}
+      <form onSubmit={onSubmitHandler}
        onClick={(e)=> e.stopPropagation()} 
        className='flex bg-white rounded-xl max-w-4xl max-md:mx-2'>
         <img src={assets.regImage} alt="reg-image"

@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { assets, cities } from '../assets/assets'
+import React, { useState } from 'react';
+import { assets, cities } from '../assets/assets';
 import { useAppcontext } from '../context/AppContext';
 import toast from 'react-hot-toast';
 
@@ -74,8 +74,12 @@ const HotelReg = () => {
             </div>
                    {/* Hotel Address */}
             <div className='w-full mt-4'>
-               <label htmlFor="address" className='font-medium text-gray-500'>Address</label>
-               <input onChange={(e)=> setAddress(e.target.value)} 
+               <label
+                htmlFor="address" className='font-medium text-gray-500'>
+                Address
+                </label>
+               <input
+                onChange={(e)=> setAddress(e.target.value)} 
                value={address} id='address' type="text"
                 placeholder='Type here' 
                 className='border border-gray-200 rounded w-full px-3 py-2.5 mt-1 outline-indigo-500' 
@@ -83,7 +87,10 @@ const HotelReg = () => {
             </div>
             {/* Select City Drop Down */}
              <div className='w-full mt-4 max-w-60 mr-auto'>
-               <label htmlFor="city" className='font-medium text-gray-500'>City</label>
+               <label 
+               htmlFor="city" className='font-medium text-gray-500'>
+                City
+                </label>
                <select onChange={(e)=> setCity(e.target.value)}
                 value={city} id="city"
                  className='border border-gray-200 rounded w-full px-3 py-2.5 mt-1 outline-indigo-500 font-light' 

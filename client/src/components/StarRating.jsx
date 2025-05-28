@@ -1,4 +1,4 @@
-import { assets } from '../assets/assets'
+import { assets } from '../assets/assets';
 
 const StarRating = ({rating = 4}) => {
   return (
@@ -16,4 +16,4 @@ const StarRating = ({rating = 4}) => {
   )
 }
 
-export default StarRating
+export default StarRating;

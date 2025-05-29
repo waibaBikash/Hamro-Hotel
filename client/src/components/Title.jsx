@@ -1,7 +1,9 @@
 import React from 'react'
 
 
-const Title = ({title, subTitle, align, font}) => {
+const Title = ({title, 
+  subTitle, 
+  align, font}) => {
   return (
     <div 
      className={`flex flex-col justify-center text-center ${align === "left" && "md:items-start md:text-left"} `}>

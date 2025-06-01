@@ -39,7 +39,8 @@ const AddRoom = () => {
   const onsubmitHandler = async (e) => {
     e.preventDefault();
     // Check if all images are filled
-    if(!inputs.roomType || !inputs.pricePerNight || !inputs.amenities || !Object.values(images).some(image => image)){ 
+    if(!inputs.roomType || !inputs.pricePerNight || !inputs.amenities || !Object
+      .values(images).some(image => image)){ 
       toast.error('Please fill all the fields and upload at least one image.');
       return;
     }

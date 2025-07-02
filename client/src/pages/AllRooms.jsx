@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { assets, facilityIcons, roomsDummyData } from '../assets/assets'
+import React, { useState } from 'react';
+import { assets, facilityIcons, roomsDummyData } from '../assets/assets';
 import { useNavigate } from 'react-router-dom';
 import StarRating from '../components/StarRating';
 
@@ -7,7 +7,8 @@ import StarRating from '../components/StarRating';
 const CheckBox = ({label, selected = false, onchange = () => { }})=>{
  return (
    <label className='flex gap-3 items-center cursor-pointer mt-2 text-sm'>
-      <input type="checkbox" checked={selected} onchange={(e)=>onchange(e.target.checked, label)} />
+      <input type="checkbox" checked={selected}
+       onchange={(e)=>onchange(e.target.checked, label)} />
        <span className='font-light select-none'>{label}</span>
    </label>
  )
@@ -25,7 +26,8 @@ const RadioButton = ({label, selected = false, onchange = () => { }})=>{
 const AllRooms = () => {
   const navigate = useNavigate();
 
-  const [openFilters, setOpenFilters] = useState(false)
+  const [openFilters, 
+    setOpenFilters] = useState(false)
 
   const roomTypes = [
     "Single Bed",
